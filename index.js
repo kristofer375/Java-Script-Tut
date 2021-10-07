@@ -1,9 +1,10 @@
-const oryginalnaCena = 30;
-const procentowaPrzecena = 10;
-const cenaPromocji = oryginalnaCena * (procentowaPrzecena / 100);
+var cena = 30;
+var czySprzedawana = true;
 
-// *inny kod*
-
-// const może pomóc przy znajdowaniu błedów jeśli np przypadkowo zmienimy wartość w innej części kodu
-
-return cenaPromocji;
+// var shadowing - nadpisanie wartości
+// let i const - istnieje wewnątrz określonego bloku poleceń bez nadpisywania wartości zmiennej poza nią
+if (czySprzedawana) {
+    let cena = 20 - 2;
+    console.log('cena promocyjna', cena)
+}
+console.log('cena', cena);
