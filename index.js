@@ -1,10 +1,14 @@
-var cena = 30;
-var czySprzedawana = true;
+// let imie = prompt("Podaj imię:");
+// const wiadomosc = `Cześć ${imie}! Miło mi Cię poznać!`;
+// alert(wiadomosc);
 
-// var shadowing - nadpisanie wartości
-// let i const - istnieje wewnątrz określonego bloku poleceń bez nadpisywania wartości zmiennej poza nią
-if (czySprzedawana) {
-    let cena = 20 - 2;
-    console.log('cena promocyjna', cena)
-}
-console.log('cena', cena);
+// const waga = 100;
+// const wagaNaKsiezycu = `Twoja waga na księżycu to ${waga * 0.165}.`;
+// console.log(wagaNaKsiezycu);
+
+// ` "w cudzysłowie" ${jakaś zmienna}` - umożliwia więcej operacji w jednym stringu
+const trzyLinie = `
+    To powinno
+    pojawić się
+    w trzech liniach.`;
+console.log(trzyLinie);
