@@ -1,24 +1,16 @@
+const czyPotwierdzony = false;
+// let iloscPrzedmiotow = 0;
 /*
-string
-number
-boolean
-undefined
-null
-symbol
-
-object type
+if (czyPotwierdzony) {
+    iloscPrzedmiotow = 1;
+} else {
+    alert("Proszę się zalogować!")
+    iloscPrzedmiotow = 0;
+}
 */
+const iloscPrzedmiotow = czyPotwierdzony ? 1 : console.log("Proszę się zalogować!");
+console.log(czyPotwierdzony);
 
-// String(42);
-// console.log('3' * '2');
-if ('hello') {
-    console.log('run!');
-} else {
-    // false, 0, '', null, undefined, NaN
-    console.log('stop!');
-}
-if (undefined === null) {
-    console.log('hmmm');
-} else {
-    console.log('nie działa');
-}
+const wiek = prompt("Ile masz lat?");
+const powitanie = wiek < 10 ? "Hej!" : wiek > 18 ? "Dzień dobry!" : "Hej maluchu :)";
+console.log(powitanie);
