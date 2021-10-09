@@ -1,14 +1,24 @@
-// let imie = prompt("Podaj imię:");
-// const wiadomosc = `Cześć ${imie}! Miło mi Cię poznać!`;
-// alert(wiadomosc);
+/*
+string
+number
+boolean
+undefined
+null
+symbol
 
-// const waga = 100;
-// const wagaNaKsiezycu = `Twoja waga na księżycu to ${waga * 0.165}.`;
-// console.log(wagaNaKsiezycu);
+object type
+*/
 
-// ` "w cudzysłowie" ${jakaś zmienna}` - umożliwia więcej operacji w jednym stringu
-const trzyLinie = `
-    To powinno
-    pojawić się
-    w trzech liniach.`;
-console.log(trzyLinie);
+// String(42);
+// console.log('3' * '2');
+if ('hello') {
+    console.log('run!');
+} else {
+    // false, 0, '', null, undefined, NaN
+    console.log('stop!');
+}
+if (undefined === null) {
+    console.log('hmmm');
+} else {
+    console.log('nie działa');
+}
