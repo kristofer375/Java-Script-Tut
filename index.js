@@ -1,19 +1,17 @@
-"use strict";
-
-function handleLikePost(step) {
-    let likeCount = 0;
-    return function addLike() {
-        likeCount += step;
-        return likeCount;
-    }
-    console.log("like count:", likeCount);
+function functionName() {
+    return 'value';
 }
 
-const like = handleLikePost(1);
-const doubleLike = handleLikePost(2);
+const user = {
+    name: 'mateusz',
+    joined: '22 Maja, 2002'
+}
 
-console.log(like());
-console.log(like());
+const capitalize = name => `${name.charAt(0).toUpperCase()}${name.slice(1)}`;
 
-console.log(doubleLike());
-console.log(doubleLike());
+function greetUser(name, callback) {
+    return callback(capitalize(name));
+}
+
+const result = greetUser(user.name, name => `Hi there, ${name}`)
+console.log(result);
