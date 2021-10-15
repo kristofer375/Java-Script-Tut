@@ -1,22 +1,19 @@
 const user = {
-    name: "imie",
-    username: "nick",
-    email: "email@gmail.com",
-    details: {
-        title: "tytuł"
-    }
+    name: "",
+    username: "",
+    phoneNumber: "",
+    email: "",
+    password: ""
 };
 
-//const { username, email } = user;
+const newUser = {
+    username: "nick",
+    email: "email@gmail.com",
+    password: "xyz"
+};
 
-//function displayUser() {
-//    console.log(`Username: ${username}, Email: ${email}`);
-//}
-//displayUser();
+//console.log(Object.assign({}, user, newUser, { verified: false }));
+//console.log(user);
 
-//const { name, details: { title } } = user;
-
-function displayUserBio({ name, details: { title } }) {
-    console.log(`${name} is a ${title}`);
-}
-displayUserBio(user);
+const createdUser = { ...console.user, ...newUser, verified: false };
+console.log(createdUser);
