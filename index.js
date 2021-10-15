@@ -1,12 +1,22 @@
-const num = 42;
-const innyNum = 42;
+const user = {
+    name: "imie",
+    username: "nick",
+    email: "email@gmail.com",
+    details: {
+        title: "tytuł"
+    }
+};
 
-console.log(num === innyNum);
-//primitives - passed by value
+//const { username, email } = user;
 
-const obj = {};
-const innyObj = obj;
-//reference (object) - passed by reference
-innyObj.a = 1;
-console.log("obj", obj);
-console.log("innyObj", innyObj);
+//function displayUser() {
+//    console.log(`Username: ${username}, Email: ${email}`);
+//}
+//displayUser();
+
+//const { name, details: { title } } = user;
+
+function displayUserBio({ name, details: { title } }) {
+    console.log(`${name} is a ${title}`);
+}
+displayUserBio(user);
