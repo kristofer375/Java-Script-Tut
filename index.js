@@ -1,22 +1,14 @@
-const breakfast = ["nazwa"];
-const dinner = ["inna nazwa", "inna nazwa 2"];
-
-const wszystko = ["ostatnia nazwa"];
-
-const inne = [
-    ...breakfast,
-    ...dinner,
-    "dodatkowa nazwa",
-    ...wszystko
+const array = [
+    "jeden",
+    "dwa",
+    "trzy"
 ];
-console.log(inne);
 
-const index = inne.findIndex(idea => idea === "dodatkowa nazwa");
+const [winner, ...losers] = array;
+console.log(winner, losers);
 
-const ostateczne = [
-    ...inne.slice(0, index),
-    "dodatkowa druga nazwa",
-    ...inne.slice(index + 1)
-]
+//let [pierwszy, drugi, trzeci] = array;
 
-console.log(ostateczne);
+//[drugi, pierwszy] = [pierwszy, drugi];
+
+//console.log(pierwszy, drugi, trzeci);
