@@ -1,14 +1,26 @@
-const array = [
-    "jeden",
-    "dwa",
-    "trzy"
-];
+//const student1 = {
+//    id: 1,
+//    name: "imię",
+//    subjects: [],
+//    addSubject(subject) {
+//        this.subjects = [...this.subjects, subject];
+//    }
+//};
 
-const [winner, ...losers] = array;
-console.log(winner, losers);
+//student1.addSubject('Gym');
+//console.log(student1.subjects);
 
-//let [pierwszy, drugi, trzeci] = array;
+function Student(id, name, subjects = []) {
+    this.id = id;
+    this.name = name;
+    this.subjects = subjects;
+}
 
-//[drugi, pierwszy] = [pierwszy, drugi];
+Student.prototype.addSubject = function(subject) {
+    this.subjects = [...this.subjects, subject]
+}
 
-//console.log(pierwszy, drugi, trzeci);
+const student1 = new Student(1, "Jeff");
+student1.addSubject('Gym');
+
+console.log(student1);
