@@ -1,12 +1,16 @@
-const restauracje = [
-    { nazwa: "aaa", dystans: 2.2},
-    { nazwa: "bbb", dystans: 3.2},
-    { nazwa: "ccc", dystans: 4.2},
-    { nazwa: "ddd", dystans: 5.2},
-    { nazwa: "eee", dystans: 6.2}
+const menuItems = [
+    { item: "aaa", price: 2.2},
+    { item: "bbb", price: 3.2},
+    { item: "ccc", price: 4.2},
+    { item: "ddd", price: 5.2},
+    { item: "eee", price: 6.2}
 ];
 
-const wyniki = restauracje.find(restauracje => 
-    restauracje.nazwa.toUpperCase().includes('AA') && restauracje.dystans < 5)
-console.log(wyniki);
-//console.log(restauracje);
+menuItems.reduce((accumulator, menuItem) => {
+    console.log(`
+    accumulator: ${accumulator},
+    menu item price: ${menuItem.price}
+    `)
+    return accumulator + menuItem.price;
+}, 0);
+//console.log(total);
