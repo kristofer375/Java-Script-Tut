@@ -1,14 +1,32 @@
-class Student {
-    constructor(id, name, subjects = []) {
-        this.id = id;
-        this.name = name;
-        this.subjects = subjects;
+class Produkt {
+    constructor(nazwa, cena, czyZnizka) {
+        this.nazwa = nazwa;
+        this.cena = cena;
+        this.czyZnizka = czyZnizka;
     }
 
-    getStudentName() {
-        return `Student: ${this.name}`;
+    czyPrzecena() {
+        return this.czyZnizka;
     }
 }
 
-const studend3 = new Student(3, "Bob")
-console.log(studend3.getStudentName());
+//const produkt1 = new Produkt('Toster', 45.99, true);
+
+class PrzecenaProduktu extends Produkt {
+    constructor(nazwa, cena, czyZnizka, procentowaZnizka) {
+        super(nazwa, cena, czyZnizka);
+        this.procentowaZnizka = procentowaZnizka;
+    }
+
+    wezObnizonaCena() {
+        if (super.czyPrzecena()) {
+            return this.cena * ((100 - this.procentowaZnizka) / 100);
+        } else {
+            return `Ten produkt nie jest przeceniony`;
+        }
+    }
+
+}
+
+const znizkowy1 = new PrzecenaProduktu('Toster', 45.99, true, 20);
+console.log(znizkowy1.wezObnizonaCena());
