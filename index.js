@@ -1,14 +1,12 @@
-const temperatura = [
-    { stopnie: 69, czyNajwyzsza: false},
-    { stopnie: 82, czyNajwyzsza: true},
-    { stopnie: 73, czyNajwyzsza: false},
-    { stopnie: 64, czyNajwyzsza: false}
+const restauracje = [
+    { nazwa: "aaa", dystans: 2.2},
+    { nazwa: "bbb", dystans: 3.2},
+    { nazwa: "ccc", dystans: 4.2},
+    { nazwa: "ddd", dystans: 5.2},
+    { nazwa: "eee", dystans: 6.2}
 ];
 
-const nowaTemp = temperatura.map(temperatura =>
-    temperatura.stopnie > 70 ? { ...temperatura, czyWysoka: true} : temperatura
-).forEach(temperatura => {
-    if (temperatura.czyWysoka) {
-        console.log(`Temperatta ${temperatura.stopnie}`)
-    }
-})
+const wyniki = restauracje.find(restauracje => 
+    restauracje.nazwa.toUpperCase().includes('AA') && restauracje.dystans < 5)
+console.log(wyniki);
+//console.log(restauracje);
