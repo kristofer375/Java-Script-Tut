@@ -1,26 +1,14 @@
-//const student1 = {
-//    id: 1,
-//    name: "imię",
-//    subjects: [],
-//    addSubject(subject) {
-//        this.subjects = [...this.subjects, subject];
-//    }
-//};
+class Student {
+    constructor(id, name, subjects = []) {
+        this.id = id;
+        this.name = name;
+        this.subjects = subjects;
+    }
 
-//student1.addSubject('Gym');
-//console.log(student1.subjects);
-
-function Student(id, name, subjects = []) {
-    this.id = id;
-    this.name = name;
-    this.subjects = subjects;
+    getStudentName() {
+        return `Student: ${this.name}`;
+    }
 }
 
-Student.prototype.addSubject = function(subject) {
-    this.subjects = [...this.subjects, subject]
-}
-
-const student1 = new Student(1, "Jeff");
-student1.addSubject('Gym');
-
-console.log(student1);
+const studend3 = new Student(3, "Bob")
+console.log(studend3.getStudentName());
