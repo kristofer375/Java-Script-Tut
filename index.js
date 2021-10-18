@@ -1,19 +1,14 @@
-const user = {
-    name: "",
-    username: "",
-    phoneNumber: "",
-    email: "",
-    password: ""
-};
+const temperatura = [
+    { stopnie: 69, czyNajwyzsza: false},
+    { stopnie: 82, czyNajwyzsza: true},
+    { stopnie: 73, czyNajwyzsza: false},
+    { stopnie: 64, czyNajwyzsza: false}
+];
 
-const newUser = {
-    username: "nick",
-    email: "email@gmail.com",
-    password: "xyz"
-};
-
-//console.log(Object.assign({}, user, newUser, { verified: false }));
-//console.log(user);
-
-const createdUser = { ...console.user, ...newUser, verified: false };
-console.log(createdUser);
+const nowaTemp = temperatura.map(temperatura =>
+    temperatura.stopnie > 70 ? { ...temperatura, czyWysoka: true} : temperatura
+).forEach(temperatura => {
+    if (temperatura.czyWysoka) {
+        console.log(`Temperatta ${temperatura.stopnie}`)
+    }
+})
