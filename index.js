@@ -1,26 +1,18 @@
-//pending - nadal wykonywane
-//fulfilled - gotowe
-//rejected - niepowodzenie wykonania
+// API: Application Program Interface
+// CRUD - create (POST), read (GET), update (PUT/PATCH), delete (DELETE)
 
-//const promise = new Promise((resolve, reject) => {
-//    setTimeout(() => resolve('done'), 1000)
-//    setTimeout(() => reject(Error('Promise failed.')), 1000)
-//});
+const blogPost = {
+    title: "aaa",
+    body: "bbbbbb",
+    userId: 1
+}
 
-//promise
-//    .then(value => console.log(value))
-//    .catch(error => console.error(error))
-//   .finally(() => console.log('done'))
-
-const promise = new Promise((resolve, reject) => {
-    navigator.geolocation.getCurrentPosition(position => {
-        resolve(position);
-        }, error => {
-            reject(error);
-        });
+fetch('http://jsonplaceholder.typicode.com/posts', {
+    method: 'POST',
+    body: JSON.stringify(blogPost),
+    headers: {
+        'Content-Type': 'application/json'
+    }
 })
-
-promise
-    .then(position => console.log(position))
-    .catch(error => console.error(error))
-    .finally(() => console.log('done'))
+    .then(response => response.json())
+    .then(data => console.log(data));
